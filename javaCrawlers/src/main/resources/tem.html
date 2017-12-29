@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>爬虫爬取结果</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<h1 style="text-align: center">{{title}}  <span style="font-size: 10px">失败请求{{badCount}}个,总共请求{{totalRequestCount}}个  {{now}}</span>
+</h1>
+<div>
+    <h2>爬虫参数</h2>
+    <span>公司URL : <a href="{{companyURL}}">{{companyURL}}</a></span><br>
+    <span>商品URL : <a href="{{goodsURL}}">{{goodsURL}}</a></span><br>
+    <span>关键字 : {{keyword}}</span><br>
+    <hr>
+</div>
+<div>
+    {{#data}}
+    <span style="font-weight: bold">第{{排名}}名 : </span><a href="{{主页}}" target="_blank">{{名称}} ({{产品个数}})</a><br>
+    页码：{{页码}}<br>
+    {{#厂房面积}}厂房面积：{{厂房面积}}{{/厂房面积}} {{#经营模式}}经营模式：{{经营模式}}{{/经营模式}}
+    {{#重复采购率}}重复采购率：{{重复采购率}}{{/重复采购率}} {{#所在地}}所在地：{{所在地}}{{/所在地}}
+    {{#员工人数}}员工人数：{{员工人数}}{{/员工人数}} {{#主营产品}}主营产品：{{主营产品}}{{/主营产品}}
+    {{#工艺类型}}工艺类型：{{工艺类型}}{{/工艺类型}} {{#累计买家数}}累计买家数：{{累计买家数}}{{/累计买家数}}
+    {{#累计成交数}}累计成交数：{{累计成交数}}{{/累计成交数}}
+    <hr>
+    {{/data}}
+</div>
+<div>
+    {{#bad}}
+    <span>{{url}}</span><br>
+    {{/bad}}
+</div>
+</body>
+</html>

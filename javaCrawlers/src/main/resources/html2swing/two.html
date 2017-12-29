@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>阿里巴巴供应商产品个数</title>
+    <meta charset="utf8">
+    <style>
+        body * {
+            position: absolute;
+            background: black;
+            text-align: center;
+            color: white;
+        }
+
+        .row {
+            width: 0;
+            height: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="row">
+    <div class="label" style="left: 10px;top: 10px;width: 200px;height: 45px;">公司URL</div>
+    <input id="companyURL" class="textField" style="left: 200px;top: 10px;width: 350px;height: 50px;" value="one">
+</div>
+<div class="row">
+    <div class="label" style="left: 10px;top: 60px;width: 200px;height: 45px;">商品URL</div>
+    <input id="goodsURL" class="textField" style="left: 200px;top: 60px;width: 350px;height: 50px;" value="two">
+</div>
+<div class="row">
+    <div class="label" style="left: 10px;top: 110px;width: 200px;height: 45px;">爬虫休息时间</div>
+    <input id="delay" type="range" value="5" min="0" max="60" step="1"
+           style="left:200px;top:110px;width:350px;height:50px">
+</div>
+<div class="row">
+    <div class="label" style="left: 10px;top: 160px;width: 200px;height: 45px;">关键词</div>
+    <input id="keyword" class="textField" style="left: 200px;top: 160px;width: 350px;height: 50px;" value="three">
+</div>
+<button style="left:300px;top:240px;width:250px;height=50;font-family: 楷体;font-size: 18px;font-style: italic">启动爬虫
+</button>
+<div id="progressBar" class="progressBar" style="left:10px;top:300px;width:550px;height:30px;"></div>
+<div id="progressInfo" class="label" style="left:50px;top:350px;width:400px;height:20px;" >已用时间3min，还剩时间4min</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<commonswing>
+    <frame id="main" ico="ico.jpg">
+        <title>H2管理器 - 设置</title>
+        <width>400</width>
+        <height>200</height>
+        <defaultCloseOperation>exit</defaultCloseOperation>
+        <center>true</center>
+        <content>
+
+            <label bounds="10,10,100,20" bgcolor="00FF00">文件路径:</label>
+            <text bounds="130,10,100,20" id="path"></text>
+            <button target="path" bounds="230,10,80,20" actionClass="com.tntxia.commonswing.action.ChooseFileAction">
+                选择
+            </button>
+
+            <label bounds="10,40,100,20">用户名:</label>
+            <text bounds="130,40,100,20" id="username"></text>
+
+            <label bounds="10,70,100,20">密码:</label>
+            <text bounds="130,70,100,20" id="password"></text>
+
+            <button bounds="160,100,60,20">登陆</button>
+        </content>
+    </frame>
+</commonswing>
